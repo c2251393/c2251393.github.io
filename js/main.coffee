@@ -35,7 +35,7 @@ modInv = (e) ->
   inv = (myPow x, (mod - 2), mod)
   console.log(inv.toString())
   $('#modInvRes').html('\\( '+x.toString()+'^{-1} \\equiv'+inv.toString()+'\\mod{'+mod.toString()+'}'+' \\)')
-  MathJax.Hub.Queue ["Typeset", MathJax.Hub]
+  MathJax.Hub.Queue ["Typeset", MathJax.Hub, "modInvRes"]
 
 $(document).ready (->
   $('#infLbd').click(->
