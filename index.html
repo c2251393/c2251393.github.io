@@ -132,23 +132,27 @@
         </div>
       </div>
       <h1 class="ui horizontal header divider">Mod Inverse calculator</h1>
-      <div class="ui form">
-        <div class="field">
+      <div class="ui blue segment">
+        <div class="ui form">
           <label>Calculate \( x ^ {-1} \mod{p} \)</label>
           <div class="three fields">
             <div class="field">
-              <input type="text" id="x" placeholder="Which x">
+              <form id="invFormx">
+                <input type="text" id="x" placeholder="Which x">
+              </form>
             </div>
             <div class="field">
-              <input type="text" id="MOD" placeholder="Under which PRIME p!!">
+              <form id="invFormMOD">
+                <input type="text" id="MOD" placeholder="Under which PRIME p!!">
+              </form>
             </div>
             <div class="field">
-              <div class="ui green submit button" id="invBut">Calc it!!!</div>
+              <div class="ui green submit button" id="invBut">Calc!!</div>
             </div>
           </div>
         </div>
       </div>
-      <div class="ui segment">
+      <div class="ui pink inverted segment">
         <p id="modInvRes"></p>
       </div>
     </div>

@@ -26,13 +26,16 @@ myPow = (x, n, mod) ->
   else
     return mul tmp, x, mod
 
-process = () ->
+modInv = (e) ->
+  e.preventDefault()
   txt1 = $('#x').val()
   txt2 = $('#MOD').val()
   x   = (parseInt txt1)
   mod = (parseInt txt2)
   inv = (myPow x, (mod - 2), mod)
-  $('#modInvRes').html("<strong>"+inv.toString()+"</strong>")
+  console.log(inv.toString())
+  $('#modInvRes').html('\\( '+x.toString()+'^{-1} \\equiv'+inv.toString()+'\\mod{'+mod.toString()+'}'+' \\)')
+  MathJax.Hub.Queue ["Typeset", MathJax.Hub]
 
 $(document).ready (->
   $('#infLbd').click(->
@@ -41,5 +44,8 @@ $(document).ready (->
   $('#aboutMeH').click(->
     $('#about').fadeToggle(500)
   )
-  $('#invBut').click(process)
+  
+  $('#invFormx').submit(modInv)
+  $('#invFormMOD').submit(modInv)
+  $('#invBut').click(modInv)
 )
