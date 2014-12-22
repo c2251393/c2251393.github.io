@@ -20,7 +20,6 @@
   <a class="item">I</a>
   <a class="item"> \( \lambda x . x\ x \) </a>
 </nav>
-<div></div>
 
 <div class="ui padded page grid">
   <div class="row">
@@ -28,7 +27,7 @@
       <div class="ui orange center aligned segment">
         <div class="ui two column center aligned grid">
           <div class="ui center aligned column">
-            <img class="ui medium centered rounded image" src="./images/head.jpg">
+            <img class="ui medium centered rounded image" src="./images/head.jpg" id="me">
             <p><div class="ui orange submit button">ME</div></p>
 
           </div>
@@ -57,10 +56,10 @@
           </div>
         </div>
       </div>
-      <h1 class="ui horizontal header">
+      <h1 class="ui horizontal header" id="aboutMeH">
         About me
       </h1>
-      <div class="ui secondary green inverted segment">
+      <div class="ui secondary green inverted segment" id="about">
         <p>
           BLAHBLAHBLAHBLAH
         </p>
@@ -103,7 +102,7 @@
         <p>
           A lambda function : \( \lambda f . \lambda x . f\ x \).Has type \( (A \to B) \to A \to B \) . But there's lambda functions that have infinte type.
 
-          <div class="ui red inverted circular segment">
+          <div class="ui red inverted circular segment" id="infLbd">
             \( \lambda x . x\ x \)
           </div>
 
@@ -131,6 +130,26 @@
             <div class="description">Get the balloon.</div>
           </div>
         </div>
+      </div>
+      <h1 class="ui horizontal header divider">Mod Inverse calculator</h1>
+      <div class="ui form">
+        <div class="field">
+          <label>Calculate \( x ^ {-1} \mod{p} \)</label>
+          <div class="three fields">
+            <div class="field">
+              <input type="text" id="x" placeholder="Which x">
+            </div>
+            <div class="field">
+              <input type="text" id="MOD" placeholder="Under which PRIME p!!">
+            </div>
+            <div class="field">
+              <div class="ui green submit button" id="invBut">Calc it!!!</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ui segment">
+        <p id="modInvRes"></p>
       </div>
     </div>
   </div>
